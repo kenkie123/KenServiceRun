@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  KenServiceRun
-//
-//  Created by Kenneth Lee on 9/28/26.
-//
-
 import SwiftUI
 
 struct ContentView: View {
