@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24512" systemVersion="25D125" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
-    <entity name="ServiceVisit" representedClassName="ServiceVisit" syncable="YES" codeGenerationType="class">
+    <entity name="ServiceVisit" representedClassName=".ServiceVisit" syncable="YES" codeGenerationType="class">
         <attribute name="address" attributeType="String"/>
         <attribute name="contactName" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
@@ -10,7 +10,7 @@
         <attribute name="status" attributeType="String"/>
         <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="VisitTask" inverseName="visit" inverseEntity="VisitTask"/>
     </entity>
-    <entity name="VisitTask" representedClassName="VisitTask" syncable="YES" codeGenerationType="class">
+    <entity name="VisitTask" representedClassName=".VisitTask" syncable="YES" codeGenerationType="class">
         <attribute name="completed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="technicianNotes" optional="YES" attributeType="String"/>

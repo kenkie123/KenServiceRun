@@ -29,22 +29,9 @@
 		43EDE5A7306A21A500A44C22 /* KenServiceRunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KenServiceRunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		43EDE5C030732EA200A44C22 /* Exceptions for "KenServiceRun" folder in "KenServiceRun" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				ServiceRunModel.xcdatamodeld,
-			);
-			target = 43EDE58F306A21A200A44C22 /* KenServiceRun */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		43EDE592306A21A200A44C22 /* KenServiceRun */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				43EDE5C030732EA200A44C22 /* Exceptions for "KenServiceRun" folder in "KenServiceRun" target */,
-			);
 			path = KenServiceRun;
 			sourceTree = "<group>";
 		};
