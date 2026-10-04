@@ -1,45 +1,81 @@
 import SwiftUI
-import Foundation
-
 @main
 struct KenServiceRunApp: App {
     var body: some Scene {
         WindowGroup {
-            AppRootView()
+        AppRootView()
         }
-    }
 }
-
-private struct AppRootView: View {
-    @State private var repository: CoreDataVisitRepository?
-    @State private var errorMessage: String?
-
+}
+struct AppRootView: View {
+    @Environment(\.scenePhase)
+    private var scenePhase
+    @State
+    private var repository:
+        CoreDataVisitRepository?
+    @State
+    private var errorMessage: String?
+    @State
+    private var sharedItem: SharedItem?
     var body: some View {
         Group {
-            if let repository {
-                DashboardView(repository: repository)
-
+    if let repository {
+                DashboardView(
+                    repository: repository
+                )
             } else if let errorMessage {
                 ContentUnavailableView(
                     "ServiceRun Unavailable",
-                    systemImage: "exclamationmark.triangle",
-                    description: Text(errorMessage)
+                    systemImage:
+                        "exclamationmark.triangle",
+                    description:
+                        Text(errorMessage)
                 )
-
             } else {
-                ProgressView("Loading")
-            }
+                ProgressView(
+                "Loading ServiceRun..."
+            )
         }
-        .task {
-            guard repository == nil else {
-                return
-            }
+        }
+    .task {
+            await loadRepository()
+            loadSharedContent()
+        }
+    .onChange(of: scenePhase) {
+            _, newPhase in
 
-            do {
-                repository = try await CoreDataVisitRepository()
-            } catch {
-                errorMessage = error.localizedDescription
+            if newPhase == .active {
+                loadSharedContent()
             }
         }
+        .sheet(
+            item: $sharedItem
+        ) { item in
+
+            SharedContentView(
+                item: item
+        ) {
+                SharedContentStore.clear()
+                sharedItem = nil
+        }
+    }
+    }
+
+    private func loadRepository() async {
+        guard repository == nil else {
+            return
+        }
+
+        do {
+            repository =
+                try await CoreDataVisitRepository()
+        } catch {
+            errorMessage =
+                error.localizedDescription
+        }
+    }
+    private func loadSharedContent() {
+        sharedItem =
+            SharedContentStore.load()
     }
 }

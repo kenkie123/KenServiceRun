@@ -10,6 +10,7 @@
 		43EDE6513074BACC00A44C22 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EDE6503074BACB00A44C22 /* WidgetKit.framework */; };
 		43EDE6533074BACC00A44C22 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EDE6523074BACC00A44C22 /* SwiftUI.framework */; };
 		43EDE65E3074BACE00A44C22 /* KenServiceRunWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 43EDE64E3074BACB00A44C22 /* KenServiceRunWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		43EDE6AC3075068000A44C22 /* KenServiceRunShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 43EDE6A23075067F00A44C22 /* KenServiceRunShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,13 @@
 			remoteGlobalIDString = 43EDE64D3074BACB00A44C22;
 			remoteInfo = KenServiceRunWidgetExtension;
 		};
+		43EDE6AA3075068000A44C22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43EDE588306A21A200A44C22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43EDE6A13075067F00A44C22;
+			remoteInfo = KenServiceRunShare;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +52,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				43EDE65E3074BACE00A44C22 /* KenServiceRunWidgetExtension.appex in Embed Foundation Extensions */,
+				43EDE6AC3075068000A44C22 /* KenServiceRunShare.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +67,7 @@
 		43EDE6503074BACB00A44C22 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		43EDE6523074BACC00A44C22 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		43EDE6653074D68700A44C22 /* KenServiceRunWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KenServiceRunWidgetExtension.entitlements; sourceTree = "<group>"; };
+		43EDE6A23075067F00A44C22 /* KenServiceRunShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KenServiceRunShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -74,6 +84,13 @@
 				SharedWidgetData.swift,
 			);
 			target = 43EDE64D3074BACB00A44C22 /* KenServiceRunWidgetExtension */;
+		};
+		43EDE6AF3075068000A44C22 /* Exceptions for "KenServiceRunShare" folder in "KenServiceRunShare" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 43EDE6A13075067F00A44C22 /* KenServiceRunShare */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -102,6 +119,14 @@
 				43EDE65F3074BACE00A44C22 /* Exceptions for "KenServiceRunWidget" folder in "KenServiceRunWidgetExtension" target */,
 			);
 			path = KenServiceRunWidget;
+			sourceTree = "<group>";
+		};
+		43EDE6A33075067F00A44C22 /* KenServiceRunShare */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				43EDE6AF3075068000A44C22 /* Exceptions for "KenServiceRunShare" folder in "KenServiceRunShare" target */,
+			);
+			path = KenServiceRunShare;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -137,6 +162,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43EDE69F3075067F00A44C22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -148,6 +180,7 @@
 				43EDE5A0306A21A500A44C22 /* KenServiceRunTests */,
 				43EDE5AA306A21A500A44C22 /* KenServiceRunUITests */,
 				43EDE6543074BACC00A44C22 /* KenServiceRunWidget */,
+				43EDE6A33075067F00A44C22 /* KenServiceRunShare */,
 				43EDE64F3074BACB00A44C22 /* Frameworks */,
 				43EDE591306A21A200A44C22 /* Products */,
 			);
@@ -160,6 +193,7 @@
 				43EDE59D306A21A500A44C22 /* KenServiceRunTests.xctest */,
 				43EDE5A7306A21A500A44C22 /* KenServiceRunUITests.xctest */,
 				43EDE64E3074BACB00A44C22 /* KenServiceRunWidgetExtension.appex */,
+				43EDE6A23075067F00A44C22 /* KenServiceRunShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,6 +223,7 @@
 			);
 			dependencies = (
 				43EDE65D3074BACE00A44C22 /* PBXTargetDependency */,
+				43EDE6AB3075068000A44C22 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				43EDE592306A21A200A44C22 /* KenServiceRun */,
@@ -268,6 +303,28 @@
 			productReference = 43EDE64E3074BACB00A44C22 /* KenServiceRunWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		43EDE6A13075067F00A44C22 /* KenServiceRunShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43EDE6B03075068000A44C22 /* Build configuration list for PBXNativeTarget "KenServiceRunShare" */;
+			buildPhases = (
+				43EDE69E3075067F00A44C22 /* Sources */,
+				43EDE69F3075067F00A44C22 /* Frameworks */,
+				43EDE6A03075067F00A44C22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				43EDE6A33075067F00A44C22 /* KenServiceRunShare */,
+			);
+			name = KenServiceRunShare;
+			packageProductDependencies = (
+			);
+			productName = KenServiceRunShare;
+			productReference = 43EDE6A23075067F00A44C22 /* KenServiceRunShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -292,6 +349,9 @@
 					43EDE64D3074BACB00A44C22 = {
 						CreatedOnToolsVersion = 26.2;
 					};
+					43EDE6A13075067F00A44C22 = {
+						CreatedOnToolsVersion = 26.2;
+					};
 				};
 			};
 			buildConfigurationList = 43EDE58B306A21A200A44C22 /* Build configuration list for PBXProject "KenServiceRun" */;
@@ -312,6 +372,7 @@
 				43EDE59C306A21A500A44C22 /* KenServiceRunTests */,
 				43EDE5A6306A21A500A44C22 /* KenServiceRunUITests */,
 				43EDE64D3074BACB00A44C22 /* KenServiceRunWidgetExtension */,
+				43EDE6A13075067F00A44C22 /* KenServiceRunShare */,
 			);
 		};
 /* End PBXProject section */
@@ -339,6 +400,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		43EDE64C3074BACB00A44C22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43EDE6A03075067F00A44C22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,6 +444,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43EDE69E3075067F00A44C22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -393,6 +468,11 @@
 			isa = PBXTargetDependency;
 			target = 43EDE64D3074BACB00A44C22 /* KenServiceRunWidgetExtension */;
 			targetProxy = 43EDE65C3074BACE00A44C22 /* PBXContainerItemProxy */;
+		};
+		43EDE6AB3075068000A44C22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43EDE6A13075067F00A44C22 /* KenServiceRunShare */;
+			targetProxy = 43EDE6AA3075068000A44C22 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -724,6 +804,64 @@
 			};
 			name = Release;
 		};
+		43EDE6AD3075068000A44C22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KenServiceRunShare/KenServiceRunShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KenServiceRunShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KenServiceRunShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.KenServiceRun.KenServiceRunShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43EDE6AE3075068000A44C22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KenServiceRunShare/KenServiceRunShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KenServiceRunShare/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KenServiceRunShare;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uts.KenServiceRun.KenServiceRunShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -768,6 +906,15 @@
 			buildConfigurations = (
 				43EDE6613074BACE00A44C22 /* Debug */,
 				43EDE6623074BACE00A44C22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43EDE6B03075068000A44C22 /* Build configuration list for PBXNativeTarget "KenServiceRunShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43EDE6AD3075068000A44C22 /* Debug */,
+				43EDE6AE3075068000A44C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
