@@ -4,7 +4,7 @@ struct VisitHistoryView: View {
 
     @StateObject private var viewModel: VisitHistoryViewModel
 
-    init(repository: any VisitRepository) {
+init(repository: any VisitRepository) {
         self.repository = repository
 
         _viewModel = StateObject(
@@ -18,7 +18,7 @@ struct VisitHistoryView: View {
         List {
             if viewModel.completedVisits.isEmpty {
                 ContentUnavailableView(
-                    "No Completed Visits",
+                "No Completed Visits",
                     systemImage: "clock.arrow.circlepath",
                     description: Text(
                         "Completed service visits will appear here."
@@ -31,7 +31,7 @@ struct VisitHistoryView: View {
                         VisitDetailView(
                             visitID: visit.id,
                             repository: repository
-                        )
+                    )
                     } label: {
                         VStack(
                             alignment: .leading,
@@ -42,11 +42,10 @@ struct VisitHistoryView: View {
                                     .font(.headline)
 
                                 Spacer()
-
                                 Image(
                                     systemName: "checkmark.circle.fill"
                                 )
-                                .foregroundStyle(.green)
+                               .foregroundStyle(.green)
                             }
 
                             Label(

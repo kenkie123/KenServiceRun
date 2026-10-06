@@ -72,9 +72,6 @@ struct ScheduleServiceVisitUseCase {
     }
 }
 
-
-// MARK: - Add Visit Task
-
 enum AddVisitTaskError: Error, LocalizedError, Equatable {
     case missingTaskTitle
     case visitAlreadyCompleted
@@ -121,9 +118,6 @@ struct AddVisitTaskUseCase {
         try repository.saveVisit(visit)
     }
 }
-
-
-// MARK: - Complete Visit Task
 
 enum CompleteVisitTaskError: Error, LocalizedError, Equatable {
     case visitAlreadyCompleted

@@ -1,10 +1,7 @@
 import SwiftUI
-
 struct VisitDetailView: View {
     @Environment(\.dismiss) private var dismiss
-
-    let repository: any VisitRepository
-
+let repository: any VisitRepository
     @StateObject private var viewModel: VisitDetailViewModel
 
     init(
@@ -80,10 +77,10 @@ struct VisitDetailView: View {
                                         task.completed
                                             ? .green
                                             : .secondary
-                                    )
+                                )
 
                                     VStack(
-                                        alignment: .leading,
+                                    alignment: .leading,
                                         spacing: 3
                                     ) {
                                         Text(task.title)

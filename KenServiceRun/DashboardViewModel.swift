@@ -5,9 +5,7 @@ import Combine
 final class DashboardViewModel: ObservableObject {
     @Published var todaysVisits: [Visit] = []
     @Published var errorMessage: String?
-
-    private let repository: any VisitRepository
-
+private let repository: any VisitRepository
     init(repository: any VisitRepository) {
         self.repository = repository
     }

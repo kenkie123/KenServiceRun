@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "7CCC6EF8-B8F8-41DF-87FA-9B35F15EB476",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "performanceAntipatternCheckerEnabled" : true,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:KenServiceRun.xcodeproj",
+      "identifier" : "43EDE58F306A21A200A44C22",
+      "name" : "KenServiceRun"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:KenServiceRun.xcodeproj",
+        "identifier" : "43EDE59C306A21A500A44C22",
+        "name" : "KenServiceRunTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -2,19 +2,15 @@ import SwiftUI
 
 struct DashboardView: View {
     let repository: any VisitRepository
-
     @StateObject private var viewModel: DashboardViewModel
-
     init(repository: any VisitRepository) {
         self.repository = repository
-
         _viewModel = StateObject(
             wrappedValue: DashboardViewModel(
                 repository: repository
-            )
         )
+    )
     }
-
     var body: some View {
         NavigationStack {
             List {
@@ -26,12 +22,12 @@ struct DashboardView: View {
                         Text("Today's Run")
                             .font(.headline)
 
-                        Text(
-                            "\(viewModel.visitCount) " +
+                Text(
+                        "\(viewModel.visitCount) " +
                             (viewModel.visitCount == 1 ? "visit" : "visits")
                         )
                         .foregroundStyle(.secondary)
-                    }
+                }
                     .padding(.vertical, 4)
                 }
 
@@ -41,7 +37,7 @@ struct DashboardView: View {
                             VisitDetailView(
                                 visitID: nextVisit.id,
                                 repository: repository
-                            )
+                    )
                         } label: {
                             VStack(
                                 alignment: .leading,
@@ -131,10 +127,10 @@ struct DashboardView: View {
                                     }
                                 }
                                 .padding(.vertical, 3)
-                            }
-                        }
                     }
-                }
+                        }
+            }
+        }
             }
             .navigationTitle("ServiceRun")
             .toolbar {
@@ -185,6 +181,6 @@ struct DashboardView: View {
                     viewModel.errorMessage ?? ""
                 )
             }
-        }
+}
     }
 }
