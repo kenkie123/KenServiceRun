@@ -1,14 +1,14 @@
 **_KenServiceRun_**
 
 **Project Overview**
-ServiceRun is an iOS application designed for IT field technicians who travel between customer locations to install, diagnose, maintain, and repair equipment. The app gives technicians one place to manage scheduled visits, view site details, keep track of required tasks, record technician notes, and close a visit once all work has been completed.The idea behind ServiceRun is to make the field technician workflow easier to manage while travelling between jobs, especially when important information such as addresses, tasks, notes, and customer details may otherwise be spread across different systems or messages.
+KenServiceRun is an iOS application designed for IT field technicians who travel between customer locations to install, diagnose, maintain, and repair equipment. The app gives technicians one place to manage scheduled visits, view site details, keep track of required tasks, record technician notes, and close a visit once all work has been completed.The idea behind ServiceRun is to make the field technician workflow easier to manage while travelling between jobs, especially when important information such as addresses, tasks, notes, and customer details may otherwise be spread across different systems or messages.
 
 **Domain Context**
 The main stakeholder is an IT field technician who regularly works at different customer sites. During a service visit, the technician needs quick access to the site details, a clear list of outstanding tasks, and a way to record what work was completed.
 ServiceRun uses domain-specific terminology throughout the app, including service visits, visit tasks, technician notes, scheduled visits, completed visits, and visit history.
 
 **Architecture**
-ServiceRun uses a layered architecture to separate the user interface, business logic, and data storage.
+KenServiceRun uses a layered architecture to separate the user interface, business logic, and data storage.
 The general structure is:
 
 SwiftUI Views  
@@ -29,7 +29,7 @@ A service visit can contain multiple tasks, while each task belongs to a service
 Core Data was chosen because the app mainly needs structured local storage that can work without relying on an internet connection.
 
 **Widget Extension**
-ServiceRun includes a WidgetKit extension that allows the technician to quickly view their next service visit from the Home Screen.
+KenServiceRun includes a WidgetKit extension that allows the technician to quickly view their next service visit from the Home Screen.
 The widget displays information such as the next site, scheduled time, outstanding task count, and number of visits for the day. It supports both small and medium widget families.
 The main app stores a small copy of the required widget data in the shared App Group and requests a widget timeline reload whenever relevant visit information changes.
 
@@ -44,7 +44,7 @@ group.com.kenneth.servicerun
 The App Group is used for communication between the app and its extensions, while the main service visit data remains stored in Core Data.
 
 **Main Features**
-ServiceRun supports:
+KenServiceRun supports:
 - Scheduling service visits
 - Viewing today's incomplete visits
 - Viewing visit details
