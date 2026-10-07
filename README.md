@@ -17,13 +17,13 @@ SwiftUI Views
 → CoreDataVisitRepository  
 → Core Data
 The use cases contain important business rules such as validating a service visit before it is scheduled, preventing blank task titles, requiring technician notes before completing a task, and preventing a visit from being closed while tasks are still incomplete.
-The `VisitRepository` protocol separates the business logic from Core Data, which also makes the use cases easier to test using a mock repository.
+The VisitRepository protocol separates the business logic from Core Data, which also makes the use cases easier to test using a mock repository.
 
 **Core Data**
 Core Data is used to persist the main domain data so that service visits and tasks remain available after the app is closed.
 The database contains two related entities:
-- `ServiceVisit`
-- `VisitTask`
+- ServiceVisit
+- VisitTask
 A service visit can contain multiple tasks, while each task belongs to a service visit. The repository also includes a query that retrieves incomplete visits scheduled for the current day and sorts them by scheduled time.
 Core Data was chosen because the app mainly needs structured local storage that can work without relying on an internet connection.
 
@@ -39,7 +39,7 @@ This is useful when a technician receives a site link or job information outside
 
 **App Group**
 The main app, Widget Extension, and Share Extension use the following App Group:
-`group.com.kenneth.servicerun`
+group.com.kenneth.servicerun
 The App Group is used for communication between the app and its extensions, while the main service visit data remains stored in Core Data.
 
 **Main Features**
@@ -55,7 +55,7 @@ ServiceRun supports:
 - Viewing upcoming visit information through a Home Screen widget
 
 **Testing**
-The project includes five unit tests covering the main use cases. A `MockVisitRepository` is used instead of the real Core Data repository so the tests focus on business rules.
+The project includes five unit tests covering the main use cases. A MockVisitRepository is used instead of the real Core Data repository so the tests focus on business rules.
 The tests cover successful behaviour, boundary conditions, and domain errors, including scheduling a valid visit, rejecting a missing site name, rejecting a blank task title, completing a task with technician notes, and preventing a visit from closing while tasks are incomplete.
 
 **Setup**
