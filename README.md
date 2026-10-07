@@ -10,12 +10,13 @@ ServiceRun uses domain-specific terminology throughout the app, including servic
 **Architecture**
 ServiceRun uses a layered architecture to separate the user interface, business logic, and data storage.
 The general structure is:
+
 SwiftUI Views  
-→ ViewModels  
-→ Use Cases  
-→ VisitRepository  
-→ CoreDataVisitRepository  
-→ Core Data
+- ViewModels  
+- Use Cases  
+- VisitRepository  
+- CoreDataVisitRepository  
+- Core Data
 The use cases contain important business rules such as validating a service visit before it is scheduled, preventing blank task titles, requiring technician notes before completing a task, and preventing a visit from being closed while tasks are still incomplete.
 The VisitRepository protocol separates the business logic from Core Data, which also makes the use cases easier to test using a mock repository.
 
