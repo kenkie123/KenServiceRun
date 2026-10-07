@@ -1,4 +1,4 @@
-**_ServiceRun_**
+**_KenServiceRun_**
 
 **Project Overview**
 ServiceRun is an iOS application designed for IT field technicians who travel between customer locations to install, diagnose, maintain, and repair equipment. The app gives technicians one place to manage scheduled visits, view site details, keep track of required tasks, record technician notes, and close a visit once all work has been completed.The idea behind ServiceRun is to make the field technician workflow easier to manage while travelling between jobs, especially when important information such as addresses, tasks, notes, and customer details may otherwise be spread across different systems or messages.
